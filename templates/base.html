@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{% block title %}My Web App{% endblock %}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+  .card-header{z-index: 1000}
+</style>
+
+</head>
+<body background="{% static 'background.jpg' %}">
+<div>
+    <nav class="navbar navbar-expand-md navbar-light shadow sticky-top">
+      <div class="container">
+        <br>
+        <a href="{% url 'home' %}" class="navbar-brand text-black"><h1><b>MY WEB APP</b></h1></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-black" href="{% url 'home' %}"><h4><b>Home</b></h4></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-black" href="{% url 'contact' %}"><h4><b>Contact</b></h4></a>
+      </li>
+    
+    </ul>
+  </div>
+
+
+        </div>
+    </nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+<footer class="page-footer font-small shadow-lg">
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="" class="text-black"><b>Kunal Malvi</b></a>
+  </div>
+</footer>
+</body>
+</html>
