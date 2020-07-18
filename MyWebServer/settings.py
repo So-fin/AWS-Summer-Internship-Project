@@ -78,11 +78,14 @@ WSGI_APPLICATION = 'MyWebServer.wsgi.application'
 
 DATABASES = {
     'default': {
-				'ENGINE': 'django.db.backends.sqlite3',
-        		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    			}
-			}
-
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sofindatabase',
+        'USER': 'root',
+        'PASSWORD': 'action2.O',
+        'HOST': 'database-1.cud2mbdurzjf.ap-south-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
