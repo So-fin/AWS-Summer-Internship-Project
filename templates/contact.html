@@ -67,8 +67,9 @@ body{
             <div class="contact-image">
                 <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
             </div>
-            {% csrf_token %}
-            <form  action="goToHome">
+            
+		<form class="form-horizontal" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
                 <h3>Drop Us a Message</h3>
                <div class="row">
                     <div class="col-md-6">
@@ -92,7 +93,7 @@ body{
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <textarea name="Msg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                            <textarea name="Message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
                         </div>
                     </div>
                     <h4>Location</h4>
