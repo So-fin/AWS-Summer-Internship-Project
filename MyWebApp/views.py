@@ -20,6 +20,8 @@ def contact(request):
         if form.is_valid():
             form.save()
             return redirect('home')
+        else:
+            return render(request, 'hfgs.html')
     else:
         form = DocumentForm()
     return render(request, 'contact.html', {'form': form})
